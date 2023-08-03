@@ -614,4 +614,111 @@ Date:   Tue Aug 1 11:23:52 2023 +0200
 
 commit 9469df822cff5b1630b2eb834bc31bb3dce508ce
 :
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (ft/home-page-redesign)
+$ git checkout -b ft/merge
+fatal: a branch named 'ft/merge' already exists
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (ft/home-page-redesign)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)  
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git remote add git-copy https://github.com/GSinseswa721/git-exercise-clone.git
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git remote
+git-copy
+origin  
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git add home.html
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git commit -m "feat: changes on home"
+[main 9d93899] feat: changes on home
+ 1 file changed, 1 insertion(+)
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git push
+To https://github.com/GSinseswa721/git-exercises-theGYM.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/GSinseswa721/git-exercises-theGYM.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git pull
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 4.70 KiB | 67.00 KiB/s, done.
+From https://github.com/GSinseswa721/git-exercises-theGYM
+   37f0256..bfdf1b6  main            -> origin/main
+   c0292e7..8c6961e  ft/contact-page -> origin/ft/contact-page
+   c8ff6a6..26b7e7c  ft/faq-page     -> origin/ft/faq-page
+Merge made by the 'ort' strategy.
+ README.md | 214 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 214 insertions(+)
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git add home.html
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git commit -m "feat: changes on home"
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 621 bytes | 310.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/GSinseswa721/git-exercises-theGYM.git
+   bfdf1b6..38a65e7  main -> main
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git push git-copy
+Enumerating objects: 53, done.
+Counting objects: 100% (53/53), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (53/53), 13.30 KiB | 716.00 KiB/s, done.
+Total 53 (delta 17), reused 26 (delta 6), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/GSinseswa721/git-exercise-clone.git
+ * [new branch]      main -> main
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$ git push
+Everything up-to-date
+
+Gloria Sinseswa@DESKTOP-GP85FQ5 MINGW64 ~/Documents/git-exercises-theGYM (main)
+$
   
